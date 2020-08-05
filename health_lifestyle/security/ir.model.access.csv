@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_drugs_rec,access_drugs_rec,model_medical_drugs_recreational,group_health_lifestyle_admin,1,1,1,0
+access_diet_belief,access_diet_belief,model_medical_diet_belief,group_health_lifestyle_admin,1,1,1,0
+access_vegetarian_type,access_vegetarian_type,model_medical_drugs_recreational,group_health_lifestyle_admin,1,1,1,0

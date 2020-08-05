@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record id="medical_patient_lifestyle_form" model="ir.ui.view">
+        <field name="name">medical.patient.lifestyle.form</field>
+        <field name="model">medical.patient</field>
+        <field name="inherit_id" ref="medical.medical_abstract_entity_view_form"/>
+        <field name="mode">primary</field>
+        <field name="priority" eval="100"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='page_general_info']" position="after">
+                <page string="Lifestyle" id="patient_lifestyle">
+                    <notebook>
+                        <page string="Diet and Exersice" id="diet_and_exercise">
+                            <group colspan="4" id="group_holder1">
+                                <group col="4" string="Physical Exercise" id="physical_exercise">
+                                    <label for="exercise"/>
+                                    <field name="exercise"/>
+                                    <label for="exercise_minutes_day"/>
+                                    <field name="exercise_minutes_day"/>
+                                </group>
+                                <group col="4" string="Sleep" id="group_sleep">
+                                    <label for="sleep_hours"/>
+                                    <field name="sleep_hours"/>
+                                    <label for="sleep_during_daytime"/>
+                                    <field name="sleep_during_daytime"/>
+                                </group>
+                                <newline/>
+                                <group string="Diet" colspan="4" col="8" id="group_diet">
+                                    <label for="vegetarian_type"/>
+                                    <field name="vegetarian_type"/>
+                                    <label for="diet_belief"/>
+                                    <field name="diet_belief"/>
+                                    <newline/>
+                                    <label for="number_of_meals"/>
+                                    <field name="number_of_meals"/>
+                                    <label for="eats_alone"/>
+                                    <field name="eats_alone"/>
+                                    <label for="coffee"/>
+                                    <field name="coffee"/>
+                                    <label for="coffee_cups"/>
+                                    <field name="coffee_cups"/>
+                                    <label for="soft_drinks"/>
+                                    <field name="soft_drinks"/>
+                                    <label for="salt"/>
+                                    <field name="salt"/>
+                                    <label for="diet"/>
+                                    <field name="diet"/>
+                                    <label for="diet_info"/>
+                                    <field name="diet_info"/>
+                                </group>
+                                <newline/>
+                                <group colspan="4" id="group_lifestyle">
+                                    <field name="lifestyle_info"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Addictions" id="page_addictions">
+                            <notebook>
+                                <page string="Main" id="page_addictions_main">
+                                    <group colspan="4" col="8" id="group_addictions_main">
+                                        <label for="smoking"/>
+                                        <field name="smoking"/>
+                                        <label for="smoking_number"/>
+                                        <field name="smoking_number"/>
+                                        <label for="ex_smoker"/>
+                                        <field name="ex_smoker"/>
+                                        <label for="second_hand_smoker"/>
+                                        <field name="second_hand_smoker"/>
+                                        <label for="age_start_smoking"/>
+                                        <field name="age_start_smoking"/>
+                                        <label for="age_quit_smoking"/>
+                                        <field name="age_quit_smoking"/>
+                                        <label for="drug_usage"/>
+                                        <field name="drug_usage"/>
+                                        <label for="drug_iv"/>
+                                        <field name="drug_iv"/>
+                                        <label for="ex_drug_addict"/>
+                                        <field name="ex_drug_addict"/>
+                                        <label for="age_start_drugs"/>
+                                        <field name="age_start_drugs"/>
+                                        <label for="age_quit_drugs"/>
+                                        <field name="age_quit_drugs"/>
+                                    </group>
+                                </page>
+                                <page string="Alcohol" id="page_alchohol">
+                                    <group colspan="4" id="group_alcohol">
+                                        <label for="alcohol"/>
+                                        <field name="alcohol"/>
+                                        <label for="ex_alcoholic"/>
+                                        <field name="ex_alcoholic"/>
+                                        <label for="age_start_drinking"/>
+                                        <field name="age_start_drinking"/>
+                                        <label for="age_quit_drinking"/>
+                                        <field name="age_quit_drinking"/>
+                                        <label for="alcohol_beer_number"/>
+                                        <field name="alcohol_beer_number"/>
+                                        <label for="alcohol_wine_number"/>
+                                        <field name="alcohol_wine_number"/>
+                                        <label for="alcohol_liquor_number"/>
+                                        <field name="alcohol_liquor_number"/>
+                                    </group>
+                                    <newline/>
+                                    <field name="cage"/>
+                                </page>
+                                <page string="Recreational Drugs" id="page_recreational_drugs">
+                                    <field name="recreational_drugs"/>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page string="Sexuality" id="page_sexuality">
+                            <group colspan="4" col="12" id="group_sexuality">
+                                <label for="sexual_preferences"/>
+                                <field name="sexual_preferences"/>
+                                <label for="sexual_partners"/>
+                                <field name="sexual_partners"/>
+                                <label for="sexual_partners_number"/>
+                                <field name="sexual_partners_number"/>
+                                <newline/>
+                                <label for="first_sexual_encounter"/>
+                                <field name="first_sexual_encounter"/>
+                                <label for="sexual_practices"/>
+                                <field name="sexual_practices"/>
+                                <label for="anticonceptive"/>
+                                <field name="anticonceptive"/>
+                            </group>
+                            <newline/>
+                            <group colspan="4" col="6" string="Sexual practices" id="group_other_sexual_practices">
+                                <group id="group_sexual_holder">
+                                    <label for="sex_oral"/>
+                                    <field name="sex_oral"/>
+                                    <newline/>
+                                    <label for="sex_anal"/>
+                                    <field name="sex_anal"/>
+                                </group>
+                                <group id="group_prostitution">
+                                    <label for="prostitute"/>
+                                    <field name="prostitute"/>
+                                    <newline/>
+                                    <label for="sex_with_prostitutes"/>
+                                    <field name="sex_with_prostitutes"/>
+                                </group>
+                                <group colspan="4" id="group_sexuality_notes">
+                                    <field name="sexuality_info"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Safety" id="page_safety">
+                            <group colspan="4" col="6" string="Drive and Home Safety" id="group_drive_and_safety">
+                                <label for="motorcycle_rider"/>
+                                <field name="motorcycle_rider"/>
+                                <label for="helmet"/>
+                                <field name="helmet"/>
+                                <label for="traffic_laws"/>
+                                <field name="traffic_laws"/>
+                                <label for="car_revision"/>
+                                <field name="car_revision"/>
+                                <label for="car_seat_belt"/>
+                                <field name="car_seat_belt"/>
+                                <label for="car_child_safety"/>
+                                <field name="car_child_safety"/>
+                                <label for="home_safety"/>
+                                <field name="home_safety"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

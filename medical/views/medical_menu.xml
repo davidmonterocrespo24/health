@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2016 LasLabs Inc.
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <menuitem
+        id="medical_root"
+        name="MBS"
+        sequence="10"
+        web_icon="medical,static/description/icon.png"
+    />
+    <menuitem
+        id="medical_patient_root"
+        name="Patients"
+        parent="medical_root"
+        sequence="10"
+    />
+    <menuitem
+        id="medical_patient"
+        name="Patients"
+        parent="medical_patient_root"
+        sequence="10"
+        action="medical_patient_action"
+    />
+    <menuitem
+        id="medical_root_sub"
+        name="Configuration"
+        parent="medical_root"
+        sequence="100"
+    />
+</odoo>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id='gnuhealth_imaging_test_request_view_tree' model='ir.ui.view'>
+            <field name="name">Imaging Test Result</field>
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="arch" type="xml">
+                <tree string="Imaging Test Result">
+                    <field name="patient"/>
+                    <field name="number"/>
+                    <field name="date" />
+                    <field name="requested_test"/>
+                    <field name="request_date" />
+                    <field name="doctor"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>
