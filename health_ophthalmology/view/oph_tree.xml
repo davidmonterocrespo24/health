@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!---->
+<odoo>
+    <data>
+        <record id="gnuhealth_ophthalmology_evaluation_form" model="ir.ui.view">
+            <field name="name">gnuhealth.ophthalmology.evaluation.form</field>
+            <field name="model">gnuhealth.ophthalmology.evaluation</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <sheet>
+                        <group>
+                            <field name="patient"/>
+                            <field name="visit_date"/>
+                            <field name="health_professional"/>
+                        </group>
+                    </sheet>
+                </tree>
+            </field>
+        </record>
+    </data>
+
+</odoo>
