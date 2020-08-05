@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- 'gnuhealth.imaging.test.result' -->
+        <record id="gnuhealth_imaging_test_result_action_all" model="ir.actions.act_window">
+            <field name="name">Imaging Test Result Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">gnuhealth.imaging.test.result</field>
+            <field name="view_mode">kanban,form,tree</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record id='gnuhealth_imaging_test_result_view_form' model='ir.ui.view'>
+            <field name="name">Imaging Test Result Form</field>
+            <field name="model">gnuhealth.imaging.test.result</field>
+            <field name="arch" type="xml">
+                <form string="Imaging Test Result">
+                    <header>
+                        <button name="requested" type="object" string="Request" icon="fa-bars"/>
+                        <button name="generate_results" type="object" string="Generate Results" icon="fa-bars"/>
+                        <field name="state" widget="statusbar" options="{'clickable': '1'}"/>
+                    </header>
+                    <sheet>
+                        <group col="4">
+                            <field name="patient"/>
+                            <field name="number"/>
+                            <field name="date"/>
+                            <field name="requested_test"/>
+                            <field name="request_date"/>
+                            <field name="doctor"/>
+                            <field name="request"/>
+                        </group>
+                        <notebook>
+                            <page string="Images" id="images_page">
+                                <field name="images" colspan="4"/>
+                            </page>
+                            <page string="Comment" id="comment_page">
+                                <field name="comment" colspan="4"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

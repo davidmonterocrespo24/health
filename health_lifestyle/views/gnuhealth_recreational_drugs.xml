@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record id="patient_recreational_drugs_form" model="ir.ui.view">
+        <field name="name">patient.recreational.drugs.form</field>
+        <field name="model">medical.patient_recreational_drugs</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <label for="patient"/>
+                        <field name="patient"/>
+                        <label for="recreational_drug"/>
+                        <field name="recreational_drug"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

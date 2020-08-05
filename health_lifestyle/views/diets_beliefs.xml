@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record id="diet_belief_form" model="ir.ui.view">
+        <field name="name">diet.belief.form</field>
+        <field name="model">medical.diet.belief</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <newline/>
+                        <separator id="separator_diet_belief_description" colspan="4" string="Diet Description"/>
+                        <newline/>
+                        <field colspan="4" name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="diet_belief_tree" model="ir.ui.view">
+        <field name="name">diet.belief.tree</field>
+        <field name="model">medical.diet.belief</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="diet_belief_action">
+        <field name="name">Belief diets</field>
+        <field name="res_model">medical.diet.belief</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="diet_belief_menu"
+        name="Belief diets"
+        parent="lifestyle_conf_root"
+        action="diet_belief_action"
+        groups="health_lifestyle.group_health_lifestyle_admin"
+    />
+</odoo>

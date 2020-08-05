@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record id="patient_cage_form" model="ir.ui.view">
+        <field name="name">patient.cage.form</field>
+        <field name="model">medical.patient.cage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="evaluation_date"/>
+                        <field name="evaluation_date"/>
+                        <label for="cage_c"/>
+                        <field name="cage_c"/>
+                        <label for="cage_a"/>
+                        <field name="cage_a"/>
+                        <label for="cage_g"/>
+                        <field name="cage_g"/>
+                        <label for="cage_e"/>
+                        <field name="cage_e"/>
+                        <label for="cage_score"/>
+                        <field name="cage_score"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

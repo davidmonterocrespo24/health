@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="gnuhealth_ophthalmology_findings" model="ir.ui.view">
+            <field name="name">gnuhealth.ophthalmology.findings.form</field>
+            <field name="model">gnuhealth.ophthalmology.findings</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="eye_structure"/>
+                            <field name="affected_eye"/>
+                            <field name="finding"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

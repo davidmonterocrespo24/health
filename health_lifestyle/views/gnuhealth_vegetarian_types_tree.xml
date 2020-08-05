@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record model="ir.ui.view" id="vegetarian_types_tree">
+        <field name="name">vegetarian_types.tree</field>
+        <field name="model">medical.vegetarian_types</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="desc"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id='gnuhealth_imaging_test_type_view_tree' model='ir.ui.view'>
+            <field name="name">Imaging Test Type</field>
+            <field name="model">gnuhealth.imaging.test.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id" />
+                    <field name="name" />
+                    <field name="code" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

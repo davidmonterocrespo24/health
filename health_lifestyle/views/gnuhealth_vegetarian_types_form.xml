@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record id="vegetarian_types_form" model="ir.ui.view">
+        <field name="name">vegetarian_types.form</field>
+        <field name="model">medical.vegetarian_types</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <label for="name"/>
+                        <field name="name"/>
+                        <label for="code"/>
+                        <field name="code"/>
+                        <newline/>
+                        <label for="desc"/>
+                        <field name="desc"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

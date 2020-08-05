@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+    Copyright 2008-2020 Luis Falcon <falcon@gnuhealth.org>
+    Copyright 2011-2020 GNU Solidario <health@gnusolidario.org>
+    Copyright 2020 LabViv.
+    License GPL-3.0 or later (http://www.gnu.org/licenses/gpl).
+-->
+<odoo>
+    <record id="patient_cage_tree" model="ir.ui.view">
+        <field name="name">patient.cage.tree</field>
+        <field name="model">medical.patient.cage</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="evaluation_date" widget="date" />
+                <field name="cage_c"/>
+                <field name="cage_a"/>
+                <field name="cage_g"/>
+                <field name="cage_e"/>
+                <field name="cage_score" icon="cage_warning_icon"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
